@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Virtual Keyboard</title>
+    <style>
+      #virtual-keyboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF;
+        border: 1px solid #999;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .key {
+        font-size: 1.2em;
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        background-color: #EEE;
+        cursor: pointer;
+      }
+
+      .key:hover {
+        background-color: #DDD;
+      }
+
+      .letter {
+        text-transform: uppercase;
+      }
+
+      #input-field {
+        font-size: 1.2em;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input-field">
+    <div id="virtual-keyboard">
+      <div class="row">
+        <button class="key letter">q</button>
+        <button class="key letter">w</button>
+        <button class="key letter">e</button>
+        <button class="key letter">r</button>
+        <button class="key letter">t</button>
+        <button class="key letter">y</button>
+        <button class="key letter">u</button>
+        <button class="key letter">i</button>
+        <button class="key letter">o</button>
+        <button class="key letter">p</button>
+      </div>
+      <div class="row">
+        <button class="key letter">a</button>
+        <button class="key letter">s</button>
+        <button class="key letter">d</button>
+        <button class="key letter">f</button>
+        <button class="key letter">g</button>
+        <button class="key letter">h</button>
+        <button class="key letter">j</button>
+        <button class="key letter">k</button>
+        <button class="key letter">l</button>
+      </div>
+      <div class="row">
+        <button class="key letter">z</button>
+        <button class="key letter">x</button>
+        <button class="key letter">c</button>
+        <button class="key letter">v</button>
+        <button class="key letter">b</button>
+        <button class="key letter">n</button>
+        <button class="key letter">m</button>
+      </div>
+      <div class="row">
+        <button class="key other">Space</button>
+      </div>
+    </div>
+    <script>
+      const inputField = document.getElementById('input-field');
+      const virtualKeyboard = document.getElementById('virtual-keyboard');
+
+      virtualKeyboard.addEventListener('click', (event) => {
+  const key = event.target.innerText;
+  if (key !== undefined && key !== 'Space') {
+    inputField.value += key;
+  } else if (key === 'Space') {
+    inputField.value += ' ';
+  }
+});
+    </script>
+  </body>
+</html>
+

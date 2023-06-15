@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registration</h1>
+    <div class="slider-container">
+      <label for="color-slider">Background Color:</label>
+      <input type="range" min="0" max="255" value="128" id="color-slider">
+    </div>
+    <div class="slider-container2">
+  <label for="font-size-slider">Font Size:</label>
+  <input type="range" min="10" max="40" value="16" id="font-size-slider">
+</div>
+    <form>
+      <label for="name" id="aa">NAME</label>
+      <div class="input-container">
+        <input type="text" id="name" name="name" required>
+        <button type="button" class="read-out" data-input-id="name">🔊</button>
+      </div>
+
+      <label for="email" id="aa1">EMAIL</label>
+      <div class="input-container">
+        <input type="email" id="email" name="email" required>
+        <button type="button" class="read-out" data-input-id="email">🔊</button>
+      </div>
+
+      <label for="phone" id="aa2">PHONE</label>
+      <div class="input-container">
+        <input type="tel" id="phone" name="phone" required>
+        <button type="button" class="read-out" data-input-id="phone">🔊</button>
+      </div>
+
+      <label for="disability-type" id="aa3">Disability Type</label>
+      <div class="input-container">
+        <select id="disability-type" name="disability-type">
+          <option value="physical">Physical</option>
+          <option value="hearing">Hearing</option>
+          <option value="visual">Visual</option>
+          <option value="intellectual">Intellectual</option>
+        </select>
+        <button type="button" class="read-out" data-input-id="disability-type">🔊</button>
+      </div>
+
+      
+
+      <button type="submit">REGISTER</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

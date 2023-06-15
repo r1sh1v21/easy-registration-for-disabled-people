@@ -1,0 +1,43 @@
+#virtual-keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key {
+  font-size: 1.2em;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #EEE;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: #DDD;
+}
+
+.letter {
+  text-transform: uppercase;
+}
+
+#input-field {
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  margin-top: 10px;
+}
